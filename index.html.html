@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuvee | Link in Bio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #fffdfa;
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
+            font-weight: 400; /* Menghindari bold */
+        }
+        
+        .font-elsie {
+            font-family: 'Elsie', serif;
+        }
+
+        /* Animasi background blobs untuk kesan aesthetic & hidup */
+        .blob {
+            position: absolute;
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+        
+        .blob-pink {
+            background-color: #ffb6c1; /* Pastel pink */
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+        }
+        
+        .blob-yellow {
+            background-color: #fffacd; /* Pastel yellow */
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            bottom: 10%;
+            right: -50px;
+            animation-delay: -5s;
+        }
+
+        .blob-rose {
+            background-color: #ffd1dc; /* Soft rose */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            top: 40%;
+            left: 20%;
+            animation-duration: 15s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 20px) scale(1.1); }
+            100% { transform: translate(-20px, 40px) scale(0.9); }
+        }
+
+        /* Styling khusus untuk tombol */
+        .link-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 182, 193, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: linear-gradient(135deg, #fff0f5 0%, #fffae6 100%);
+            border-color: #ffb6c1;
+            box-shadow: 0 10px 20px -5px rgba(255, 182, 193, 0.3);
+        }
+
+        .profile-ring {
+            background: linear-gradient(45deg, #ffb6c1, #fffacd);
+            padding: 4px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex justify-center text-gray-700">
+
+    <!-- Background Animasi -->
+    <div class="blob blob-pink"></div>
+    <div class="blob blob-yellow"></div>
+    <div class="blob blob-rose"></div>
+
+    <!-- Kontainer Utama -->
+    <div class="max-w-md w-full px-6 py-12 flex flex-col items-center relative z-10">
+        
+        <!-- Header / Profil -->
+        <div class="flex flex-col items-center mb-10">
+            <div class="profile-ring mb-4 shadow-sm">
+                <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center border-4 border-white overflow-hidden">
+                    <span class="font-elsie text-5xl text-pink-300">F</span>
+                </div>
+            </div>
+            
+            <h1 class="text-3xl font-elsie text-pink-400 mb-1 tracking-wide">Fuvee</h1>
+            <p class="text-sm text-gray-500 italic opacity-80">your daily dose of girly aesthetic ✨</p>
+        </div>
+
+        <!-- Daftar Link -->
+        <div class="w-full flex flex-col gap-4">
+            
+            <!-- Link Shopee -->
+            <a href="https://s.shopee.co.id/qepkOEJaX" target="_blank" rel="noopener noreferrer" class="link-card rounded-full p-4 px-6 flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-400 flex items-center justify-center text-xl transition-colors group-hover:bg-white">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <span class="text-gray-700 text-lg">Shopee Fuvee</span>
+                <i class="fa-solid fa-chevron-right ml-auto text-pink-200 text-sm opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0"></i>
+            </a>
+
+            <!-- Link Instagram -->
+            <a href="https://www.instagram.com/wearfuvee?igsh=bGpvN2s3eG5rc2My" target="_blank" rel="noopener noreferrer" class="link-card rounded-full p-4 px-6 flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-full bg-pink-50 text-pink-500 flex items-center justify-center text-xl transition-colors group-hover:bg-white">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <span class="text-gray-700 text-lg">Instagram</span>
+                <i class="fa-solid fa-chevron-right ml-auto text-pink-200 text-sm opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0"></i>
+            </a>
+
+            <!-- Link TikTok -->
+            <a href="https://www.tiktok.com/@wearfuvee.150?_r=1&_t=ZS-94lMDESCoA0" target="_blank" rel="noopener noreferrer" class="link-card rounded-full p-4 px-6 flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-full bg-gray-50 text-gray-800 flex items-center justify-center text-xl transition-colors group-hover:bg-white">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <span class="text-gray-700 text-lg">TikTok</span>
+                <i class="fa-solid fa-chevron-right ml-auto text-pink-200 text-sm opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0"></i>
+            </a>
+
+            <!-- Link WhatsApp -->
+            <a href="https://wa.me/6285297924436" target="_blank" rel="noopener noreferrer" class="link-card rounded-full p-4 px-6 flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-full bg-green-50 text-green-500 flex items-center justify-center text-xl transition-colors group-hover:bg-white">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <span class="text-gray-700 text-lg">Admin WhatsApp</span>
+                <i class="fa-solid fa-chevron-right ml-auto text-pink-200 text-sm opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0"></i>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-12 text-xs text-gray-400 flex items-center gap-1">
+            <span>made with</span>
+            <i class="fa-solid fa-heart text-pink-300 mx-1 text-[10px]"></i>
+            <span class="font-elsie text-pink-300">by Fuvee</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
